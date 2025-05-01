@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все мои проекты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Все мои проекты</h1>
+            <a href="index.html" class="btn">← На главную</a>
+        </div>
+    </header>
+
+    <section class="all-projects">
+        <div class="container">
+            <div id="projects-container" class="projects-grid"></div>
+            <div id="pagination" class="pagination"></div>
+        </div>
+    </section>
+
+    <script id="projects-data" type="application/json">
+    [
+        {
+            "id": 1,
+            "title": "craters diary",
+            "description": "Просто блог о жизни и событиях",
+            "image": "images/project1.jpg",
+            "url": "projects/project-1.html"
+        },
+        {
+            "id": 2,
+            "title": "Soon..",
+            "description": "Soon..",
+            "image": "images/project2.jpg",
+            "url": "projects/project-2.html"
+        },
+        {
+            "id": 3,
+            "title": "Soon..",
+            "description": "Soon..",
+            "image": "images/project2.jpg",
+            "url": "projects/project-2.html"
+        },
+        {
+            "id": 4,
+            "title": "Soon..",
+            "description": "Soon..",
+            "image": "images/project2.jpg",
+            "url": "projects/project-2.html"
+        }
+    ]
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

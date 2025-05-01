@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>craters home page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Локальные стили для этой страницы */
+        .featured-projects {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>I`am craters</h1>
+            <p>Интернет обитатель / Игроман / Чиловый парень</p>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2>Обо мне</h2>
+            <p>Живу, играю, чота делаю</p>
+        </div>
+    </section>
+
+    <section class="featured-projects">
+        <div class="container">
+            <h2>Избранные проекты</h2>
+            <div class="project-grid">
+                <!-- Проект 1 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('images/project1.jpg')"></div>
+                    <h3>craters diary</h3>
+                    <p>Просто блог о жизни и событиях</p>
+                    <a href="projects/project-1.html" class="btn">Подробнее</a>
+                </div>
+                
+                <!-- Проект 2 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('images/project2.jpg')"></div>
+                    <h3>Soon..</h3>
+                    <p>Soon..</p>
+                    <a href="projects/project-2.html" class="btn">Подробнее</a>
+                </div>
+                
+                <!-- Проект 3 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('images/project3.jpg')"></div>
+                    <h3>Soon..</h3>
+                    <p>Soon..</p>
+                    <a href="projects/project-3.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+            
+            <a href="projects.html" class="btn view-all">Все мои проекты →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://vk.com/ваш_профиль" target="_blank"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/ваш_ник" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://github.com/ваш_ник" target="_blank"><i class="fab fa-github"></i></a>
+		<a href="https://github.com/ваш_ник" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>© craters, 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+/* ===== Глобальные стили ===== */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ===== Шапка ===== */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* ===== Кнопки ===== */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn.view-all {
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+}
+
+.btn.view-all:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* ===== Карточки проектов ===== */
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-card h3 {
+    padding: 20px 20px 0;
+    color: var(--secondary-color);
+}
+
+.project-card p {
+    padding: 10px 20px 20px;
+    color: #666;
+}
+
+/* ===== Сетка всех проектов ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.project-tile {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.project-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.project-tile .project-image {
+    height: 180px;
+}
+
+.project-tile h3 {
+    padding: 15px 15px 0;
+    color: var(--dark-color);
+}
+
+.project-tile p {
+    padding: 10px 15px 20px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ===== Пагинация ===== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 50px 0 30px;
+}
+
+.page-number {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.page-number:hover,
+.page-number.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* ===== Соцсети ===== */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+/* Исправление для иконок */
+.social-links a {
+    color: var(--dark-color) + 100; /* Теперь иконки будут видны всегда */
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color); /* Цвет при наведении */
+}
+
+/* ===== Подвал ===== */
+footer {
+    background: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+/* ===== Адаптивность ===== */
+@media (max-width: 768px) {
+    .projects-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header {
+        padding: 60px 0;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ===== Дополнительные стили для пагинации ===== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.page-number {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+    min-width: 40px;
+    text-align: center;
+}
+
+.page-number:hover,
+.page-number.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.page-number.prev,
+.page-number.next {
+    font-weight: bold;
+}
